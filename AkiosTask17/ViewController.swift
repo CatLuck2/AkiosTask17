@@ -5,8 +5,6 @@
 //  Created by Nekokichi on 2020/09/05.
 //  Copyright © 2020 Nekokichi. All rights reserved.
 //
-
-
 /*
  インスタンスで初期化しないと、nilになる
  realmをprivateではなく、fileprivateに
