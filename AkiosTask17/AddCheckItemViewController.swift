@@ -24,7 +24,7 @@ class AddCheckItemViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         } else {
             // 入力値を追加用のデータに代入
-            checkItem = CheckItemModel(identifier: String().randomString(), title: inputTextField.text!, isChecked: false)
+            checkItem = CheckItemModel(identifier: UUID().uuidString, title: inputTextField.text!, isChecked: false)
             // ViewControllerに戻る
             performSegue(withIdentifier: "addItemUnWind", sender: nil)
         }
@@ -34,23 +34,4 @@ class AddCheckItemViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-}
-
-extension String {
-    fileprivate func randomString() -> String {
-        // 文字群
-        let characters       = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        // 文字列の長さ
-        var len              = Int()
-        // 乱数文字
-        var randomCharacters = String()
-        
-        // 乱数を生成
-        for _ in 1...9 {
-            len = Int(arc4random_uniform(UInt32(characters.count)))
-            randomCharacters += String(characters[characters.index(characters.startIndex,offsetBy: len)])
-        }
-        
-        return randomCharacters
-    }
 }
