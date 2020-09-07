@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		610FF0022503949400FC6B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF0012503949400FC6B8C /* AppDelegate.swift */; };
+		610FF0042503949400FC6B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF0032503949400FC6B8C /* SceneDelegate.swift */; };
+		610FF0062503949400FC6B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF0052503949400FC6B8C /* ViewController.swift */; };
+		610FF0092503949400FC6B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610FF0072503949400FC6B8C /* Main.storyboard */; };
+		610FF00B2503949700FC6B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 610FF00A2503949700FC6B8C /* Assets.xcassets */; };
+		610FF00E2503949700FC6B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610FF00C2503949700FC6B8C /* LaunchScreen.storyboard */; };
+		610FF01725039A2A00FC6B8C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF01525039A2A00FC6B8C /* CustomCell.swift */; };
+		610FF01825039A2A00FC6B8C /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610FF01625039A2A00FC6B8C /* CustomCell.xib */; };
+		610FF01A25039A3D00FC6B8C /* AddCheckItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF01925039A3D00FC6B8C /* AddCheckItemViewController.swift */; };
+		610FF01C25039A4B00FC6B8C /* EditCheckItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FF01B25039A4B00FC6B8C /* EditCheckItemViewController.swift */; };
+		886FF1A55C47EB486E2828E4 /* Pods_AkiosTask17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC0A5F4C9CF8E018C0AA528 /* Pods_AkiosTask17.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D8E1AFD1BBACAEE0B22C482 /* Pods-AkiosTask17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkiosTask17.debug.xcconfig"; path = "Target Support Files/Pods-AkiosTask17/Pods-AkiosTask17.debug.xcconfig"; sourceTree = "<group>"; };
+		610FEFFE2503949400FC6B8C /* AkiosTask17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkiosTask17.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		610FF0012503949400FC6B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		610FF0032503949400FC6B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		610FF0052503949400FC6B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		610FF0082503949400FC6B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		610FF00A2503949700FC6B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		610FF00D2503949700FC6B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		610FF00F2503949700FC6B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		610FF01525039A2A00FC6B8C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		610FF01625039A2A00FC6B8C /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		610FF01925039A3D00FC6B8C /* AddCheckItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCheckItemViewController.swift; sourceTree = "<group>"; };
+		610FF01B25039A4B00FC6B8C /* EditCheckItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCheckItemViewController.swift; sourceTree = "<group>"; };
+		85886359D9B06D9018C2737C /* Pods-AkiosTask17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkiosTask17.release.xcconfig"; path = "Target Support Files/Pods-AkiosTask17/Pods-AkiosTask17.release.xcconfig"; sourceTree = "<group>"; };
+		DEC0A5F4C9CF8E018C0AA528 /* Pods_AkiosTask17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkiosTask17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		610FEFFB2503949400FC6B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886FF1A55C47EB486E2828E4 /* Pods_AkiosTask17.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		610FEFF52503949400FC6B8C = {
+			isa = PBXGroup;
+			children = (
+				610FF0002503949400FC6B8C /* AkiosTask17 */,
+				610FEFFF2503949400FC6B8C /* Products */,
+				B10911E00C931A675CA31B27 /* Pods */,
+				ACB0445C1A5D532B7D3CBFD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		610FEFFF2503949400FC6B8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				610FEFFE2503949400FC6B8C /* AkiosTask17.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		610FF0002503949400FC6B8C /* AkiosTask17 */ = {
+			isa = PBXGroup;
+			children = (
+				610FF0012503949400FC6B8C /* AppDelegate.swift */,
+				610FF0032503949400FC6B8C /* SceneDelegate.swift */,
+				610FF0052503949400FC6B8C /* ViewController.swift */,
+				610FF01925039A3D00FC6B8C /* AddCheckItemViewController.swift */,
+				610FF01B25039A4B00FC6B8C /* EditCheckItemViewController.swift */,
+				610FF01525039A2A00FC6B8C /* CustomCell.swift */,
+				610FF01625039A2A00FC6B8C /* CustomCell.xib */,
+				610FF0072503949400FC6B8C /* Main.storyboard */,
+				610FF00A2503949700FC6B8C /* Assets.xcassets */,
+				610FF00C2503949700FC6B8C /* LaunchScreen.storyboard */,
+				610FF00F2503949700FC6B8C /* Info.plist */,
+			);
+			path = AkiosTask17;
+			sourceTree = "<group>";
+		};
+		ACB0445C1A5D532B7D3CBFD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEC0A5F4C9CF8E018C0AA528 /* Pods_AkiosTask17.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B10911E00C931A675CA31B27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D8E1AFD1BBACAEE0B22C482 /* Pods-AkiosTask17.debug.xcconfig */,
+				85886359D9B06D9018C2737C /* Pods-AkiosTask17.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		610FEFFD2503949400FC6B8C /* AkiosTask17 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 610FF0122503949700FC6B8C /* Build configuration list for PBXNativeTarget "AkiosTask17" */;
+			buildPhases = (
+				03AB284367F5490B713DF612 /* [CP] Check Pods Manifest.lock */,
+				610FEFFA2503949400FC6B8C /* Sources */,
+				610FEFFB2503949400FC6B8C /* Frameworks */,
+				610FEFFC2503949400FC6B8C /* Resources */,
+				832236426AD71889DFE51FAA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AkiosTask17;
+			productName = AkiosTask17;
+			productReference = 610FEFFE2503949400FC6B8C /* AkiosTask17.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		610FEFF62503949400FC6B8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Nekokichi;
+				TargetAttributes = {
+					610FEFFD2503949400FC6B8C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 610FEFF92503949400FC6B8C /* Build configuration list for PBXProject "AkiosTask17" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 610FEFF52503949400FC6B8C;
+			productRefGroup = 610FEFFF2503949400FC6B8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				610FEFFD2503949400FC6B8C /* AkiosTask17 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		610FEFFC2503949400FC6B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				610FF00E2503949700FC6B8C /* LaunchScreen.storyboard in Resources */,
+				610FF00B2503949700FC6B8C /* Assets.xcassets in Resources */,
+				610FF01825039A2A00FC6B8C /* CustomCell.xib in Resources */,
+				610FF0092503949400FC6B8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03AB284367F5490B713DF612 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AkiosTask17-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832236426AD71889DFE51FAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AkiosTask17/Pods-AkiosTask17-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AkiosTask17/Pods-AkiosTask17-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AkiosTask17/Pods-AkiosTask17-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		610FEFFA2503949400FC6B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				610FF0062503949400FC6B8C /* ViewController.swift in Sources */,
+				610FF01A25039A3D00FC6B8C /* AddCheckItemViewController.swift in Sources */,
+				610FF0022503949400FC6B8C /* AppDelegate.swift in Sources */,
+				610FF01725039A2A00FC6B8C /* CustomCell.swift in Sources */,
+				610FF01C25039A4B00FC6B8C /* EditCheckItemViewController.swift in Sources */,
+				610FF0042503949400FC6B8C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		610FF0072503949400FC6B8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				610FF0082503949400FC6B8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		610FF00C2503949700FC6B8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				610FF00D2503949700FC6B8C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		610FF0102503949700FC6B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		610FF0112503949700FC6B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		610FF0132503949700FC6B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8E1AFD1BBACAEE0B22C482 /* Pods-AkiosTask17.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7VAC4V7M7;
+				INFOPLIST_FILE = AkiosTask17/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nekokichi-Yos.AkiosTask17";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		610FF0142503949700FC6B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85886359D9B06D9018C2737C /* Pods-AkiosTask17.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7VAC4V7M7;
+				INFOPLIST_FILE = AkiosTask17/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nekokichi-Yos.AkiosTask17";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		610FEFF92503949400FC6B8C /* Build configuration list for PBXProject "AkiosTask17" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				610FF0102503949700FC6B8C /* Debug */,
+				610FF0112503949700FC6B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		610FF0122503949700FC6B8C /* Build configuration list for PBXNativeTarget "AkiosTask17" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				610FF0132503949700FC6B8C /* Debug */,
+				610FF0142503949700FC6B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 610FEFF62503949400FC6B8C /* Project object */;
+}

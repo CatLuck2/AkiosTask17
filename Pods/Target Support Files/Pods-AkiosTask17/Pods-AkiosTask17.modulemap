@@ -1,0 +1,6 @@
+framework module Pods_AkiosTask17 {
+  umbrella header "Pods-AkiosTask17-umbrella.h"
+
+  export *
+  module * { export * }
+}
