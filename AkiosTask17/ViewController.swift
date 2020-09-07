@@ -103,7 +103,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 realm.delete(selectedCheckItem)
             }
             
-            // 最新のデータを取得（削除後のデータが残るため）
+            // 最新のデータを取得（削除したデータが[invalid object]と残ってしまい、
+            // 取得せずにTableViewを更新すると、エラーが出るため）
             // Realm-Read
             checkList         = [CheckItemModel]()
             checkListInRealm  = realm.objects(CheckItemModel.self)
