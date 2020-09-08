@@ -24,7 +24,7 @@ class AddCheckItemViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         } else {
             // 入力値を追加用のデータに代入
-            checkItem = CheckItemModel(identifier: UUID().uuidString, title: inputTextField.text!, isChecked: false)
+            checkItem = CheckItemModel(title: inputTextField.text!, isChecked: false)
             // ViewControllerに戻る
             performSegue(withIdentifier: "addItemUnWind", sender: nil)
         }

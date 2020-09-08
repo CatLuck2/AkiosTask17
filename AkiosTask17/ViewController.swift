@@ -23,22 +23,29 @@
         identifierを指定してるのに、エラーが出る
  Realmのデータを削除する方法は、①データ表示に使用している配列やリスト内のデータを直接削除、②Realm内に該当するデータを参照して削除する
  */
+/*
+ ？required init()とは？
+ ？なぜソートする必要がある？
+ モデル定義の時点で乱数を入れる
+ */
 
 import UIKit
 import RealmSwift
 
 class CheckItemModel: Object {
-    @objc dynamic var identifier = ""
-    @objc dynamic var title       = ""
-    @objc dynamic var isChecked  = false
+    @objc dynamic var identifier = UUID().uuidString
+    @objc dynamic var title      = String()
+    @objc dynamic var isChecked  = Bool()
+    @objc dynamic var createdAt  = Date()
     
-    init(identifier:String, title:String, isChecked:Bool) {
-        self.identifier = identifier
+    init(title:String, isChecked:Bool) {
         self.title      = title
         self.isChecked  = isChecked
     }
     
     required init() {
+        self.title      = ""
+        self.isChecked  = false
     }
 }
 
@@ -47,20 +54,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet private weak var checkListTableView: UITableView!
     
     // Realm
-    fileprivate let realm     = try! Realm()
-    // チェックリスト
-    private var checkList     = [CheckItemModel]()
+    private let realm     = try! Realm()
     // チェックリスト（保存用）
     private var checkListInRealm:Results<CheckItemModel>!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Realm-Read
-        checkList        = [CheckItemModel]()
-        checkListInRealm = realm.objects(CheckItemModel.self)
-        // Results<CheckItemModel> -> Array[CheckItemModel]
-        checkList        = Array(checkListInRealm)
+        checkListInRealm = realm.objects(CheckItemModel.self).sorted(byKeyPath: "createdAt")
     }
     
     override func viewDidLoad() {
@@ -72,24 +73,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return checkList.count
+        checkListInRealm.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! CustomCell
         //CustomCell内の各UIに値をセット
-        cell.configure(checkItem: checkList[indexPath.row])
+        cell.configure(checkItem: checkListInRealm[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Realm-Update
         // Rerference of selectedCheckItem
-        let selectedCheckItem = realm.objects(CheckItemModel.self).filter("identifier == %@", checkList[indexPath.row].identifier)
+        let selectedCheckItem = checkListInRealm[indexPath.row]
         try! realm.write {
-            // Results<>で取得するが、該当するのは1つだけなので、firstにした
-            selectedCheckItem.first!.isChecked.toggle()
+            selectedCheckItem.isChecked.toggle()
         }
+
         
         checkListTableView.reloadRows(at: [indexPath], with: .automatic)
     }
@@ -98,22 +99,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         if editingStyle == .delete {
             
             // Realm-Delete
-            let selectedCheckItem = realm.objects(CheckItemModel.self).filter("identifier == %@", checkList[indexPath.row].identifier)
+            let selectedCheckItem = checkListInRealm[indexPath.row]
             try! realm.write {
                 realm.delete(selectedCheckItem)
             }
             
-            // 最新のデータを取得（削除したデータが[invalid object]と残ってしまい、
-            // 取得せずにTableViewを更新すると、エラーが出るため）
-            // Realm-Read
-            checkList         = [CheckItemModel]()
-            checkListInRealm  = realm.objects(CheckItemModel.self)
-            if checkListInRealm.count > 0 {
-                for i in 0...checkListInRealm.count-1 {
-                    checkList.append(checkListInRealm[i])
-                }
-            }
-
             checkListTableView.reloadData()
         }
     }
@@ -128,7 +118,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let editCheckItemVC    = nvc.viewControllers[0] as! EditCheckItemViewController
             guard let indexpathrow = sender as? Int else { return }
             editCheckItemVC.selectedIndexPathRow = indexpathrow
-            editCheckItemVC.selectedCheckItemText = checkList[indexpathrow].title
+            editCheckItemVC.selectedCheckItemText = checkListInRealm[indexpathrow].title
         }
     }
     
@@ -136,7 +126,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // AddCheckItemで入力したデータを追加
         if unwindSegue.identifier == "addItemUnWind" {
             let addCheckItemVC = unwindSegue.source as! AddCheckItemViewController
-            checkList.append(addCheckItemVC.checkItem)
             
             // Realm-Add
             try! realm.write{
@@ -151,9 +140,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let indexPathRow    = editCheckItemVC.selectedIndexPathRow
             
             // Realm-Update
-            let selectedCheckItem = realm.objects(CheckItemModel.self).filter("identifier == %@", checkList[indexPathRow!].identifier)
+            let selectedCheckItem = checkListInRealm[indexPathRow!]
             try! realm.write {
-                selectedCheckItem.first!.title = editCheckItemVC.selectedCheckItemText
+                selectedCheckItem.title = editCheckItemVC.selectedCheckItemText
             }
             
             checkListTableView.reloadData()
