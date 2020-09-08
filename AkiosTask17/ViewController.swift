@@ -27,6 +27,7 @@
  ？required init()とは？
  ？なぜソートする必要がある？
  ？Realmに保存しなくても、データを編集するだけで更新されるのはなぜ
+ ？削除してもエラーが出ないのは、Realmのデータではなく、デバイス側のデータを削除してるから？
  モデル定義の時点で乱数を入れる
  */
 
@@ -63,6 +64,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewWillAppear(animated)
         
         checkListInRealm = realm.objects(CheckItemModel.self).sorted(byKeyPath: "createdAt")
+        print(checkListInRealm)
     }
     
     override func viewDidLoad() {
